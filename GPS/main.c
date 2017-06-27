@@ -10,8 +10,7 @@
 int main(int argc,const char * argv[]){
     FILE *fp;
     char a[80],latitude[9],longitude[10],time[7],speed[6],date[7],azi[6];
-    char b[80];
-    int altitude[5];
+    char b[80],altitude[5];
     
     int i;
     fp=fopen("//Users//20161104576fjh//Desktop//GPS170510.log","r+");
@@ -36,7 +35,7 @@ int main(int argc,const char * argv[]){
     {
         speed[i]=a[i+39];
     }
-    printf("速度:%s\n",speed);
+    printf("地面速率:%s\n",speed);
     for(i=0;i<6;i++)
     {
         date[i]=a[i+51];
@@ -47,11 +46,11 @@ int main(int argc,const char * argv[]){
         azi[i]=a[i+45];
     }
     printf("航向:%s\n",azi);
-    for(i=0;1<4;i++)
+    for(i=0;i<4;i++)
     {
-        altitude[i]=b[i+43]-48;
+        altitude[i]=b[i+43];
     }
-    printf("高度:%d\n",altitude[i]);
+    printf("高度:%sft\n",altitude);
         fclose(fp);
     return 0;
     
