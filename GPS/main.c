@@ -51,6 +51,7 @@ int main(int argc,const char * argv[]){
         altitude[i]=b[i+43];
     }
     printf("高度:%sft\n",altitude);
+    
         fclose(fp);
     return 0;
     
